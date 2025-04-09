@@ -18,4 +18,17 @@
  *
  * uniqueEntries([3, 1, 3, 2], false); // [3, 2, 1]
  */
-export const uniqueEntries = (nums = [], up = true) => {};
+export const uniqueEntries = (nums = [], up = true) => {
+  let newArr = [];
+  for (let i = 0; i < nums.length; i++) {
+    if (!newArr.includes(nums[i])) {
+      newArr.push(nums[i]);
+    }
+  }
+
+  if (up) {
+    return newArr.sort((a, b) => a - b);
+  } else {
+    return newArr.sort((a, b) => b - a);
+  }
+};

@@ -15,11 +15,21 @@
 // -------- your solutions --------
 
 for (const solution of [secretSolution]) {
-    describe(solution.name + ': _', () => {
-        describe('_', () => {
-            it('_', () => {});
-        });
+  describe(solution.name + ': returns a new array of numbers', () => {
+    describe('arrays with different characters', () => {
+      it('array with numbers, letters and punctuation marks', () => {
+        expect(solution(['1', '2', 'e', '.'])).toEqual([1, 2]);
+      });
+      it('array with numbers, letters and booleans', () => {
+        expect(solution(['1', '2', 'e', 'true'])).toEqual([1, 2]);
+      });
     });
+    describe('arrays without parameters', () => {
+      it('empty array', () => {
+        expect(solution([])).toEqual([]);
+      });
+    });
+  });
 }
 
 // minified solution for testing your tests

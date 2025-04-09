@@ -10,7 +10,8 @@
   "scripts": {
     "test": "jest --silent ",
     "lint:js": "eslint --max-warnings=0 --ext=.js --format=codeframe",
-    "format": "prettier --write ./"
+    "format": "prettier --write ./",
+    "study": "study"
   },
   "author": "HackYourFutureBelgium",
   "license": "MIT",

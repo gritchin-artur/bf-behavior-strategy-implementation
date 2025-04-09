@@ -12,11 +12,25 @@
 // -------- your solutions --------
 
 for (const solution of [secretSolution]) {
-    describe(solution.name + ': _', () => {
-        describe('_', () => {
-            it('_', () => {});
+  describe(
+    solution.name + ': removes all odd numbers from an array of numbers',
+    () => {
+      describe('removes all odd numbers', () => {
+        it('[1, 2, 3, 4] --> [2, 4]', () => {
+          expect(solution([1, 2, 3, 4])).toEqual([2, 4]);
         });
-    });
+        it('[100, 55, 33, 44] --> [100, 44]', () => {
+          expect(solution([100, 55, 33, 44])).toEqual([100, 44]);
+        });
+      });
+
+      describe('default parameters', () => {
+        it('empty array', () => {
+          expect(solution([])).toEqual([]);
+        });
+      });
+    },
+  );
 }
 
 // minified solution for testing your tests

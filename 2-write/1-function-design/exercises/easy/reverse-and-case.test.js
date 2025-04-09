@@ -14,39 +14,72 @@
 // -------- your solutions --------
 
 for (const solution of [secretSolution]) {
-    describe(
-        solution.name + ': reverses a string then sets to lower or upper case',
-        () => {
-            describe("the function's default parameters", () => {
-                it('second parameter defaults to true', () => {
-                    expect(solution('asdf')).toEqual('fdsa');
-                });
-                it('first parameter defaults to an empty string', () => {
-                    expect(solution()).toEqual('');
-                });
-            });
-            // write the tests indicated by the comments
-            describe('when set to lower case', () => {
-                // when the text is an empty string
-                it(_, () => {
-                    expect(solution(_, _)).toEqual(_);
-                });
-                // when the text is all upper case
-                // when the text is all lower case
-                // when the text is mixed upper and lower case
-                // when the text contains punctuation
-                // when the text contains numbers
-            });
-            describe('when set to upper case', () => {
-                // when the text is an empty string
-                // when the text is all upper case
-                // when the text is all lower case
-                // when the text is mixed upper and lower case
-                // when the text contains punctuation
-                // when the text contains numbers
-            });
-        },
-    );
+  describe(
+    solution.name + ': reverses a string then sets to lower or upper case',
+    () => {
+      describe("the function's default parameters", () => {
+        it('second parameter defaults to true', () => {
+          expect(solution('asdf')).toEqual('fdsa');
+        });
+        it('first parameter defaults to an empty string', () => {
+          expect(solution()).toEqual('');
+        });
+      });
+      // write the tests indicated by the comments
+      describe('when set to lower case', () => {
+        // when the text is an empty string
+        it('when the text is an empty string', () => {
+          expect(solution('', true)).toEqual('');
+        });
+        // when the text is all upper case
+        it('when the text is all upper case', () => {
+          expect(solution('QWERTY', true)).toEqual('ytrewq');
+        });
+        // when the text is all lower case
+        it('when the text is all lower case', () => {
+          expect(solution('qwerty', true)).toEqual('ytrewq');
+        });
+        // when the text is mixed upper and lower case
+        it('when the text is mixed upper and lower case', () => {
+          expect(solution('QwErTy', true)).toEqual('ytrewq');
+        });
+        // when the text contains punctuation
+        it('when the text contains punctuation', () => {
+          expect(solution('!QwErTy!', true)).toEqual('!ytrewq!');
+        });
+        // when the text contains numbers
+        it('when the text contains numbers', () => {
+          expect(solution('QwErTy123', true)).toEqual('321ytrewq');
+        });
+      });
+      describe('when set to upper case', () => {
+        // when the text is an empty string
+        it('when the text is an empty string', () => {
+          expect(solution('', false)).toEqual('');
+        });
+        // when the text is all upper case
+        it('when the text is all upper case', () => {
+          expect(solution('QWERTY', false)).toEqual('YTREWQ');
+        });
+        // when the text is all lower case
+        it('when the text is all lower case', () => {
+          expect(solution('qwerty', false)).toEqual('YTREWQ');
+        });
+        // when the text is mixed upper and lower case
+        it('when the text is mixed upper and lower case', () => {
+          expect(solution('QwErTy', false)).toEqual('YTREWQ');
+        });
+        // when the text contains punctuation
+        it('when the text contains punctuation', () => {
+          expect(solution('!QwErTy!', false)).toEqual('!YTREWQ!');
+        });
+        // when the text contains numbers
+        it('when the text contains numbers', () => {
+          expect(solution('qwerty123', false)).toEqual('321YTREWQ');
+        });
+      });
+    },
+  );
 }
 
 // minified solution for testing your tests

@@ -29,4 +29,13 @@
  * matchingBraces('()[]{}'); // true
  *
  */
-export const matchingBraces = (text = '') => {};
+export const matchingBraces = (text = '') => {
+  const stack = [];
+  for (const char of text) {
+    if (char === '(' || char === '[' || char === '{') stack.push(char);
+    else if (char === ')' && stack.pop() !== '(') return false;
+    else if (char === ']' && stack.pop() !== '[') return false;
+    else if (char === '}' && stack.pop() !== '{') return false;
+  }
+  return stack.length === 0;
+};

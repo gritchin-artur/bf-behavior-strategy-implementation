@@ -8,4 +8,7 @@ import { isArrayOfNumbers } from './is-array-of-numbers.js';
  * @param {*} numbers
  * @returns
  */
-export const findGreatestNumber = (numbers = []) => {};
+export const findGreatestNumber = (numbers = []) => {
+  // return numbers.find((a, b) => a > b)
+  return isArrayOfNumbers(numbers)
+};

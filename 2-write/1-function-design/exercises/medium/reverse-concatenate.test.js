@@ -12,11 +12,28 @@
 // -------- your solutions --------
 
 for (const solution of [secretSolution]) {
-    describe(solution.name + ': _', () => {
-        describe('_', () => {
-            it('_', () => {});
+  describe(
+    solution.name +
+      ': takes an array of strings, reverses it, and combines the strings',
+    () => {
+      describe('array of strings', () => {
+        it('["q", "w", "e", "r", "t", "y"] --> "ytrewq"', () => {
+          expect(solution(['q', 'w', 'e', 'r', 't', 'y'])).toEqual('ytrewq');
         });
-    });
+        it('["a", "v", "a", "j"] --> "java"', () => {
+          expect(solution(['a', 'v', 'a', 'j'])).toEqual('java');
+        });
+      });
+      describe('default parameters', () => {
+        it('[] --> ""', () => {
+          expect(solution([])).toEqual('');
+        });
+        it('[""] --> ""', () => {
+          expect(solution([''])).toEqual('');
+        });
+      });
+    },
+  );
 }
 
 // minified solution for testing your tests
