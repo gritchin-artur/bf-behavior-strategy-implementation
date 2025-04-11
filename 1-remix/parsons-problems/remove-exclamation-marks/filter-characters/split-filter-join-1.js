@@ -2,7 +2,7 @@
 
 /* this exercise has 3 distractors */
 
-function removeExclamationMarks(s) {
+export function removeExclamationMarks(s) {
   var arr = s.split('');
   arr = arr.filter(function (e) {
     return e !== '!';
@@ -11,6 +11,6 @@ function removeExclamationMarks(s) {
 }
 
 
-arr.filter(function (e) { // distractor
-var arr = s.join(''); // distractor
-return arr.split(''); // distractor
+// arr.filter(function (e) { // distractor
+// var arr = s.join(''); // distractor
+// return arr.split(''); // distractor

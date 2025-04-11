@@ -2,7 +2,7 @@
 
 /* this exercise has 3 distractors */
 
-function removeExclamationMarks(s) {
+export function removeExclamationMarks(s) {
   var newString = '';
   for (let i = 0; i < s.length; i++) {
     if (s[i] != '!') {
@@ -12,6 +12,6 @@ function removeExclamationMarks(s) {
   return newString;
 }
 
-newString = s[i]; // distractor
-return s; // distractor
-if (s[i] == '!') { // distractor
+// newString = s[i]; // distractor
+// return s; // distractor
+// if (s[i] == '!') { // distractor

@@ -2,12 +2,12 @@
 
 /* this exercise has 2 distractors */
 
-function removeExclamationMarks(s) {
+export function removeExclamationMarks(s) {
   const result = Array.from(s).filter((element) => {
     return element !== '!';
   });
   return result.join('');
 }
 
-element !== '!'; // distractor
-const result = s.filter((element) => { // distractor
+// element !== '!'; // distractor
+// const result = s.filter((element) => { // distractor

@@ -2,10 +2,10 @@
 
 /* this exercise has 3 distractors */
 
-function removeExclamationMarks(s) {
+export function removeExclamationMarks(s) {
   return s.replace(/!/gi, '');
 }
 
-var function removeExclamationMarks(s) { // distractor
-s.replace(/!/gi, ''); // distractor
-function removeExclamationMarks(s) => { // distractor
+// var function removeExclamationMarks(s) { // distractor
+// s.replace(/!/gi, ''); // distractor
+// function removeExclamationMarks(s) => { // distractor

@@ -2,7 +2,7 @@
 
 /* this exercise has 2 distractors */
 
-function removeExclamationMarks(s) {
+export function removeExclamationMarks(s) {
     while (s.includes('!')) {
         let index = s.indexOf('!');
         s = s.slice(0, index).concat(s.slice(index + 1, s.length));
@@ -11,5 +11,5 @@ function removeExclamationMarks(s) {
     return s;
 }
 
-s.slice(0, index).concat(s.slice(index + 1, s.length)); // distractor
-let s = s.slice(0, index).concat(s.slice(index + 1, s.length)); // distractor
+// s.slice(0, index).concat(s.slice(index + 1, s.length)); // distractor
+// let s = s.slice(0, index).concat(s.slice(index + 1, s.length)); // distractor

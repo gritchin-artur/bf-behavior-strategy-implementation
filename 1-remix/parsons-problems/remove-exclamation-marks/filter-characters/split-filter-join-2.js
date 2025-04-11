@@ -2,13 +2,13 @@
 
 /* this exercise has 3 distractors */
 
-let removeExclamationMarks = (s) =>
+export let removeExclamationMarks = (s) =>
   s
     .split('')
     .filter((e) => e != '!')
     .join('');
 
 
-.split(''); // distractor
-.filter((e) => e != '!'); // distractor
-.join('') // distractor
+// .split(''); // distractor
+// .filter((e) => e != '!'); // distractor
+// .join('') // distractor

@@ -2,13 +2,13 @@
 
 /* this exercise has 2 distractors */
 
-function removeExclamationMarks(s) {
+export function removeExclamationMarks(s) {
   while (s.search('!') >= 0) {
     s = s.replace('!', '');
   }
   return s;
 }
 
-s = s.replace('', '!'); // distractor
-while (s.search('!') > 0) { // distractor
-while (s.search('!') !== 0) { // distractor
+// s = s.replace('', '!'); // distractor
+// while (s.search('!') > 0) { // distractor
+// while (s.search('!') !== 0) { // distractor
